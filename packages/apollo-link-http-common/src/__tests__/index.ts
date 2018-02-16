@@ -209,14 +209,14 @@ describe('Common Http functions', () => {
 
   describe('checkFetcher', () => {
     it('throws if no fetch is present', () => {
-      if (typeof fetch !== 'undefined') fetch = undefined;
+      delete window.fetch;
       expect(() => checkFetcher(undefined)).toThrow(
         /fetch is not found globally/,
       );
     });
 
     it('does not throws if no fetch is present but a fetch is passed', () => {
-      if (typeof fetch !== 'undefined') fetch = undefined;
+      delete window.fetch;
       expect(() => checkFetcher(() => {})).not.toThrow();
     });
   });
