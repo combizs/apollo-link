@@ -1,6 +1,7 @@
 # Change log
 
 ### vNEXT
+- change import method of zen-observable for rollup compat
 
 # 1.1.0
 - Expose `#execute` on ApolloLink as static
